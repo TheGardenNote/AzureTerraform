@@ -21,6 +21,7 @@ provider "azurerm" {
     key_vault {
       purge_soft_delete_on_destroy    = false
       recover_soft_deleted_key_vaults = true
+      #odtworzenie usunietych key vaultow, jesli purge_soft_delete_on_destroy jest false, to key vaulty sa przenoszone do soft delete, a recover_soft_deleted_key_vaults pozwala na ich odzyskanie
     }
   }
 
